@@ -1,0 +1,351 @@
+@font-face {
+    font-family: Poppins-Regular;
+    src: local("./fonts/poppins/Poppins-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: Poppins-Medium;
+    src: url('./fonts/poppins/Poppins-Medium.ttf');
+  }
+
+  @font-face {
+    font-family: Roboto-Medium;
+    src: url('./fonts/Roboto-Medium.ttf');
+  }
+
+  :root {
+    --color1: #ffcd3c;
+    --color2: #4c8bf5;
+    --input-font-size: 12px;
+    --label-font-size: 10.5px;
+    --button-font-size: 13.5px;
+    --error-font-size: 9px;
+  }
+
+.signin__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100%;
+    /* background-image: url("./images/bg-home.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; */
+}
+
+.signin__form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+    max-width: 800px;
+    height: 500px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+}
+
+.signin__form__right {
+    width: 50%;
+    height: 100%;
+}
+
+.signin__form__right img {
+    width: 100%;
+    height: 100%;
+}
+
+.signin__form__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.signin__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    font-size: 21px;
+    font-family: Poppins-Medium;
+}
+
+.signin__IdpBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    margin-top: 25px;
+    gap: 10px;
+}
+
+.signin__Idp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: white;
+}
+
+.signin__Idp__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 100%;
+    box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.1);
+}
+
+.signin__Idp__left img {
+    max-width: 60%;
+    max-height: 60%;
+}
+
+.signin__Idp__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+    font-size: 14px;
+    font-family: Poppings-Medium;
+}
+
+.signin__Idp.google {
+    background-color: #4285F4;
+}
+
+.signin__separator {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+
+#hr1 {
+    position: absolute;
+    width: 35%;
+    left: 40px;
+}
+
+#hr2 {
+    position: absolute;
+    width: 35%;
+    right: 40px;
+}
+
+.signin__infobox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 25px;
+    gap: 10px;
+}
+
+.signin__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 85%;
+    gap: 5px;
+}
+
+.signin__info input {
+    padding: 10px 15px;
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    font-family: "Merriweather";
+    font-size: var(--input-font-size);
+    transition: 0.25s;
+}
+
+.signin__info input:focus {
+    border-radius: 5px;
+    outline: 3px solid var(--color2);
+}
+
+.signin__info .password {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+    border-radius: 20px;
+    background-color: white;
+    transition: 0.25s;
+}
+
+.signin__info .password:focus-within {
+    border-radius: 5px;
+    outline: 3px solid var(--color2);
+}
+
+.signin__info .password input {
+    width: 100%;
+    border: none;
+    outline: none;
+  }
+
+  .signin__info .password svg {
+    position: inherit;
+    right: 10px;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+  }
+
+  .signin__info .password svg:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 1);
+  }
+
+#error {
+    outline: 2px solid darkred;
+}
+
+#error:focus-within {
+    outline: 3px solid darkred;
+}
+
+.signin__info__error {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 15px;
+    font-family: "Merriweather";
+    font-size: var(--error-font-size);
+    color: darkred;
+    visibility: hidden;
+}
+
+.signin__info__error.show {
+    visibility: visible;
+}
+
+.signin__info__error svg {
+    margin-right: 4px;
+    font-size: 13px;
+    color: darkred;
+}
+
+.remember {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    margin-top: 5px;
+    width: 80%;
+    gap: 7px;
+    font-family: "Helvetica Neue";
+    font-size: 13px;
+    /* background-color: blue; */
+}
+
+.remember input {
+    width: 13px;
+    height: 13px;
+}
+
+.signin__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.signin__button button {
+    border: none;
+    padding: 0 30px;
+    height: 35px;
+    border-radius: 5px;
+    font-family: "Merriweather";
+    font-size: var(--button-font-size);
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.8);
+    background-color: var(--color1);
+    transition: 0.35s;
+}
+
+.signin__button button:hover {
+    padding: 0 50px;
+    cursor: pointer;
+    color: white;
+    background-color: #4c8bf5;
+}
+
+.signin__button button:focus {
+    outline: none;
+    padding: 0 50px;
+    cursor: pointer;
+    color: white;
+    background-color: #4c8bf5;
+}
+
+.signin__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font-family: "Helvetica Neue";
+    font-size: 14px;
+}
+
+.signin__footer a {
+    margin-left: 8px;
+    border: none;
+    text-decoration: none;
+    color: blue;
+}
+
+.signin__footer a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: darkgreen;
+}
+
+.signin__footer a:focus {
+    outline: none;
+    text-decoration: underline;
+    color: darkgreen;
+}
+
+@media (max-width: 800px) {
+    .signin__form {
+        flex-direction: column;
+        width: 60%;
+        min-width: 300px;
+    }
+
+    .signin__form__right {
+        visibility: hidden;
+        height: 0;
+    }
+
+    .signin__form__left {
+        width: 100%;
+    }
+}

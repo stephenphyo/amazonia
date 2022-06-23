@@ -1,0 +1,17 @@
+version: "3"
+services:
+  amazonia-backend:
+    build:
+      context: ./amazonia-backend
+      dockerfile: docker/Dockerfile
+    ports:
+      - "9000:9000"
+    env_file:
+      - ./amazonia-backend/.env
+
+  amazonia-frontend:
+    build:
+      context: ./amazonia-frontend
+      dockerfile: docker/Dockerfile
+    ports:
+      - "80:3000"

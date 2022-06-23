@@ -1,0 +1,161 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Merriweather&family=Playfair+Display&display=swap");
+@font-face {
+  font-family: "Helvetica Neue";
+  src: local("../public/fonts/HelveticaNeue Medium.ttf");
+}
+
+:root {
+  --color1: #ffcd3c;
+  --color2: #4c8bf5;
+}
+
+.signin__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.signin__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  max-width: 350px;
+  min-width: 280px;
+  padding: 30px 20px;
+  border-radius: 15px;
+  background-color: lightgray;
+}
+
+.signin__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  font-family: "Merriweather";
+  font-size: 17px;
+}
+
+.signin__infobox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5px;
+  padding: 20px 0;
+  gap: 20px;
+}
+
+.signin__info {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  gap: 5px;
+}
+
+.signin__info label {
+  margin-left: 8px;
+  font-family: "Merriweather";
+  font-size: 12px;
+}
+
+.signin__info input {
+  padding: 10px 15px;
+  width: 90%;
+  border: none;
+  border-radius: 20px;
+  font-family: "Merriweather";
+  font-size: 13px;
+  transition: 0.25s;
+}
+
+.signin__info input:focus {
+  border-radius: 5px;
+  outline: 3px solid var(--color2);
+}
+
+.signin__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.signin__button button {
+  border: none;
+  padding: 0 30px;
+  height: 35px;
+  border-radius: 5px;
+  font-family: "Merriweather";
+  font-size: 15px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.8);
+  background-color: var(--color1);
+  transition: 0.35s;
+}
+
+.signin__button button:hover {
+  padding: 0 50px;
+  cursor: pointer;
+  color: white;
+  background-color: #4c8bf5;
+}
+
+.signin__button button:focus {
+  outline: none;
+  padding: 0 50px;
+  cursor: pointer;
+  color: white;
+  background-color: #4c8bf5;
+}
+
+.signin__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  font-family: "Helvetica Neue";
+  font-size: 14px;
+}
+
+.signin__footer a {
+  margin-left: 8px;
+  border: none;
+  text-decoration: none;
+  color: blue;
+}
+
+.signin__footer a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: darkgreen;
+}
+
+.signin__footer a:focus {
+  outline: none;
+  text-decoration: underline;
+  color: darkgreen;
+}
+
+.underground {
+  position: fixed;
+  width: 200px;
+  height: 30px;
+  bottom: 0;
+  right: 100px;
+  cursor: pointer;
+  border-radius: 10px 10px 0 0;
+  background-color: pink;
+  z-index: 20;
+  transition: 0.25s ease;
+}
+
+.underground.rise {
+  height: 100px;
+}

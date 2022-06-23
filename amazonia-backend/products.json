@@ -1,0 +1,106 @@
+[
+        {
+            "id": "1",
+            "name": "Remax Headphone",
+            "brand": "Remax",
+            "description": "Good for music lovers",
+            "category": "Electronics",
+            "subCategory": "Headphones",
+            "price": 4.99,
+            "orgPrice": 19.99,
+            "inStock": 3,
+            "rating": 4.5,
+            "reviews": 20,
+            "coverImage": "https://amazonia-111111.s3.amazonaws.com/product01.jpg",
+            "smallImages": [
+                "https://amazonia-111111.s3.amazonaws.com/product06-01.jpg",
+                "https://amazonia-111111.s3.amazonaws.com/product06-02.jpg",
+                "https://amazonia-111111.s3.amazonaws.com/product06-03.jpg"
+            ]
+        },
+        {
+            "id": "2",
+            "name": "Fuji Camera",
+            "brand": "Fuji",
+            "description": "Very Fine Camera for Professionals",
+            "category": "Electronics",
+            "subCategory": "Camera",
+            "price": 219.99,
+            "orgPrice": 239.99,
+            "inStock": 10,
+            "rating": 3.5,
+            "reviews": 10,
+            "coverImage": "https://amazonia-111111.s3.amazonaws.com/product02.jpg",
+            "smallImages": [
+                "https://amazonia-111111.s3.amazonaws.com/product06-01.jpg"
+            ]
+        },
+        {
+            "id": "3",
+            "name": "Nikon Camera",
+            "brand": "Nikon",
+            "description": "Very Fine Camera for Professionals",
+            "category": "Electronics",
+            "subCategory": "Camera",
+            "price": 114.99,
+            "orgPrice": 124.99,
+            "inStock": 10,
+            "rating": 0.5,
+            "reviews": 10,
+            "coverImage": "https://amazonia-111111.s3.amazonaws.com/product03.jpg",
+            "smallImages": [
+                "https://amazonia-111111.s3.amazonaws.com/product06-01.jpg"
+            ]
+        },
+        {
+            "id": "4",
+            "name": "Keyboard",
+            "brand": "Fuji",
+            "description": "Very Fine Camera for Professionals",
+            "category": "Electronics",
+            "subCategory": "Camera",
+            "price": 119.99,
+            "orgPrice": 139.99,
+            "inStock": 10,
+            "rating": 0,
+            "reviews": 10,
+            "coverImage": "https://amazonia-111111.s3.amazonaws.com/product04.jpg",
+            "smallImages": [
+                "https://amazonia-111111.s3.amazonaws.com/product06-01.jpg"
+            ]
+        },
+        {
+            "id": "5",
+            "name": "Lady Shoe",
+            "brand": "Fuji",
+            "description": "Very Fine Camera for Professionals Professionals Professionals Professionals",
+            "category": "Electronics",
+            "subCategory": "Camera",
+            "price": 119.99,
+            "orgPrice": 139.99,
+            "inStock": 0,
+            "rating": 5,
+            "reviews": 10,
+            "coverImage": "https://amazonia-111111.s3.amazonaws.com/product05.jpg",
+            "smallImages": [
+                "https://amazonia-111111.s3.amazonaws.com/product06-01.jpg"
+            ]
+        },
+        {
+            "id": "6",
+            "name": "Men Style Pants",
+            "brand": "Gucci",
+            "description": "Fine Cotton Pants for Businessmen",
+            "category": "Fashion",
+            "subCategory": "Men Wear",
+            "price": 9.99,
+            "orgPrice": 19.99,
+            "inStock": 1,
+            "rating": 4.5,
+            "reviews": 50,
+            "coverImage": "https://amazonia-111111.s3.amazonaws.com/product06.jpg",
+            "smallImages": [
+                "https://amazonia-111111.s3.amazonaws.com/product06-01.jpg"
+            ]
+        }
+    ]

@@ -1,0 +1,36 @@
+:root {
+  --main-background-color: #9c88ff;
+  --header-height: 50px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+.app {
+  height: 100%;
+  display: block;
+  flex-direction: column;
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.app__body {
+  height: calc(100% - 50px);
+  background-color: var(--main-background-color);
+  /* background-image: url("images/bg-home.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; */
+}

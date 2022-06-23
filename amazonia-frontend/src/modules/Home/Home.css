@@ -1,0 +1,34 @@
+:root {
+  --color2: #4c8bf5;
+}
+
+.home {
+  background-image: url("images/bg-home.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.home__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+}
+
+.home__header img {
+  width: 100%;
+  max-width: 600px;
+  height: 250px;
+  border-radius: 10px;
+  /* mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)); */
+}
+
+.home__products {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  overflow-y: auto;
+}

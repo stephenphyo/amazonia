@@ -1,0 +1,126 @@
+.imgup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    z-index: 2;
+}
+
+.imgup__body {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 180px);
+    grid-gap: 20px;
+    justify-content: space-between;
+    padding: 30px 50px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 540px;
+    max-height: fit-content;
+    overflow-y: scroll;
+    border-bottom: 2px solid rgb(128, 128, 128);
+    gap: 20px;
+}
+
+.imgup__imgcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 180px;
+    height: 150px;
+    box-shadow: 0px 0px 3px 1px rgba(128, 128, 128, 0.5);
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.addimg {
+    position: relative;
+    background-color: white;
+}
+
+.addimg input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.imgup__imgcontainer:hover, .addimg input:hover {
+    box-shadow: 0px 0px 3px 3px rgba(128, 128, 128, 0.5);
+}
+
+.imgup__imgcontainer img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.imgup__imgcontainer #delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.imgup__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    gap: 20px;
+}
+
+.imgup__footer .btn {
+    height: 60% !important;
+    width: 120px;
+}
+
+.progress__container {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress__bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 50%;
+    height: 16px;
+    border-radius: 8px;
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+.progress {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0px;
+    height: 16px;
+    border-radius: 8px;
+    transition: 0.1s;
+    background-color: pink;
+}
+
+.progress__indicator {
+    font-family: sans-serif;
+    font-size: 14px;
+}

@@ -1,0 +1,20 @@
+.checkout__container {
+  margin: 30px;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #404040;
+}
+
+.checkout__body {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  gap: 50px;
+}
+
+@media (max-width: 800px) {
+  .checkout__body {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

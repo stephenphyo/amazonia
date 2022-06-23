@@ -1,0 +1,148 @@
+/* Fonts */
+@font-face {
+  font-family: "Helvetica Neue";
+  src: local("../public/fonts/HelveticaNeue Medium.ttf");
+}
+
+:root {
+  --color1: #ffcd3c;
+  --color2: #4c8bf5;
+}
+
+.cart__subtotal {
+  display: flex;
+  flex-direction: column;
+  flex: 0.25;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  max-height: 200px;
+  font-family: "Times New Roman", Times, serif;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+.subtotal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 0;
+  width: 100%;
+  height: 50%;
+  border-bottom: 1px solid lightgray;
+  font-size: 15px;
+  font-family: "Helvetica Neue";
+  gap: 10px;
+}
+
+.subtotal__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  gap: 10px;
+}
+
+.subtotal__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  gap: 10px;
+}
+
+.subtotal #subtotal {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.subtotal #discount {
+  font-weight: bold;
+  color: green;
+}
+
+.subtotal #original {
+  font-weight: bold;
+  text-decoration: line-through;
+  color: red;
+}
+
+.subtotal__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0;
+  height: 50%;
+  width: 100%;
+  margin: 20px 0 10px 0;
+}
+
+.subtotal__button button {
+  height: 35px;
+  padding: 8px 20px;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Helvetica Neue";
+  font-weight: bold;
+  color: rgba (128, 128, 128, 0.8);
+  border-radius: 5px;
+  border: none;
+  transition: 0.25s;
+  background-color: var(--color1);
+}
+
+.subtotal__button button:hover:not(:disabled) {
+  padding: 8px 30px;
+  cursor: pointer;
+  color: white;
+  background-color: var(--color2);
+}
+
+.subtotal__button button:disabled {
+  cursor: not-allowed;
+}
+
+@media (max-width: 800px) {
+  .cart__subtotal {
+    width: 50%;
+    margin-left: 50%;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    /* background-color: blue; */
+  }
+
+  .subtotal {
+    width: 90%;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .subtotal__button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 650px) {
+  .cart__subtotal {
+    flex-direction: column;
+    margin: none;
+    padding: none;
+  }
+
+  .subtotal {
+    flex-direction: column;
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .cart__subtotal {
+    width: 100%;
+    margin-left: 0px;
+  }
+}

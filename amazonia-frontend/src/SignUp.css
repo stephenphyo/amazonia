@@ -1,0 +1,249 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Merriweather&family=Playfair+Display&display=swap");
+@font-face {
+  font-family: "Helvetica Neue";
+  src: local("../public/fonts/HelveticaNeue Medium.ttf");
+}
+
+:root {
+  --color1: #ffcd3c;
+  --color2: #4c8bf5;
+  --input-font-size: 12px;
+  --label-font-size: 10.5px;
+  --button-font-size: 13.5px;
+  --error-font-size: 9px;
+}
+
+.signup__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.signup__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  max-width: 350px;
+  min-width: 280px;
+  padding: 30px 20px;
+  padding-bottom: 20px;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.signup__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  font-family: "Merriweather";
+  font-size: 20px;
+}
+
+.signup__infobox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5px;
+  padding: 20px 0;
+  gap: 6px;
+}
+
+.signup__info {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  gap: 3px;
+}
+
+.signup__info label {
+  margin-left: 8px;
+  font-family: "Merriweather";
+  font-size: var(--label-font-size);
+}
+
+.signup__info input {
+  width: 100%;
+  padding: 8px 15px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-family: "Merriweather";
+  font-size: var(--input-font-size);
+  transition: 0.25s;
+}
+
+.signup__info input:focus {
+  border-radius: 5px;
+  outline: 3px solid var(--color2);
+}
+
+#error {
+  outline: 2px solid darkred;
+}
+
+#error:focus-within {
+  outline: 3px solid var(--color2);
+}
+
+.signup__info__nameContainer {
+  display: flex;
+  flex-direction: row;
+  width: 94%;
+  gap: 10px;
+}
+
+.signup__info.name input {
+  padding: 8px 0 8px 15px;
+}
+
+.signup__info .password, .gender {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: white;
+  transition: 0.25s;
+}
+
+.signup__info .password:focus-within,
+.gender:focus-within {
+  border-radius: 5px;
+  outline: 3px solid var(--color2);
+}
+
+.signup__info .password input {
+  width: 90%;
+  border: none;
+  outline: none;
+}
+
+.signup__info .password svg {
+  position: inherit;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.signup__info .password svg:hover {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 1);
+}
+
+.signup__info .gender select {
+  padding: 8px 15px;
+  border: none;
+  outline: none;
+  font-family: "Merriweather";
+  font-size: var(--input-font-size);
+  appearance: none;
+  width: 100%;
+}
+
+.signup__info .gender svg {
+  position: inherit;
+  right: 10px;
+  z-index: 10;
+}
+
+.signup__info__error {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 2px;
+  font-family: "Merriweather";
+  font-size: var(--error-font-size);
+  color: darkred;
+  visibility: hidden;
+}
+
+.signup__info__error.show {
+  visibility: visible;
+}
+
+.signup__info__error.show input {
+  border: 3px solid darkred;
+}
+
+.signup__info__error svg {
+  position: inherit;
+  margin-left: 7px;
+  margin-right: 4px;
+  font-size: calc(var(--error-font-size) + 3px);
+  color: darkred;
+}
+
+.signup__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 15px 20px;
+}
+
+.signup__button button {
+  border: none;
+  padding: 0 30px;
+  height: 35px;
+  border-radius: 5px;
+  font-family: "Merriweather";
+  font-size: var(--button-font-size);
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.8);
+  background-color: var(--color1);
+  transition: 0.35s;
+}
+
+.signup__button button:hover {
+  padding: 0 50px;
+  cursor: pointer;
+  color: white;
+  background-color: #4c8bf5;
+}
+
+.signup__button button:focus {
+  outline: none;
+  padding: 0 50px;
+  cursor: pointer;
+  color: white;
+  background-color: #4c8bf5;
+}
+
+.signup__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  font-family: "Helvetica Neue";
+  font-size: 14px;
+}
+
+.signup__footer a {
+  margin-left: 8px;
+  border: none;
+  text-decoration: none;
+  color: darkblue;
+}
+
+.signup__footer a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: darkgreen;
+}
+
+.signup__footer a:focus {
+  outline: none;
+  text-decoration: underline;
+  color: darkgreen;
+}

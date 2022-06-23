@@ -1,0 +1,16 @@
+version: "3"
+services:
+  amazonia-backend:
+    build:
+      context: ./amazonia-backend
+      dockerfile: docker/Dockerfile
+
+  amazonia-frontend:
+    build:
+      context: ./amazonia-frontend
+      dockerfile: docker/Dockerfile
+
+  amazonia-mongodb:
+    image: mongo
+    env_file:
+     - ./amazonia-database/MongoDB/.env

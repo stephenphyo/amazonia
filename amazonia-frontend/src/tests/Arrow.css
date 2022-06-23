@@ -1,0 +1,12 @@
+.container {
+    width: 100vw;
+    height: calc(100vh - 50px);
+}
+
+.mybutton {
+    margin-left: 200px;
+    margin-top: 200px;
+    width: 100px;
+    height: 30px;
+    background-color: white;
+}

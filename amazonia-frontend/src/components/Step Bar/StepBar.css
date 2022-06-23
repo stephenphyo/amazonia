@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "Helvetica Neue";
+  src: local("../public/fonts/HelveticaNeue Medium.ttf");
+}
+
+.stepbar__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  top: 50px;
+  width: 100%;
+  height: fit-content;
+  padding: 0 30px 0 10px;
+  box-sizing: border-box;
+  margin: 0;
+  gap: 10px;
+  background-color: rgba(255, 255, 255);
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 24%;
+  height: 20px;
+  padding: 5px 0;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  background-color: yellow;
+}
+
+.step::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid white;
+  border-right: 15px solid transparent;
+  left: 0px;
+}
+
+.step::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid yellow;
+  border-right: 15px solid transparent;
+  left: 100%;
+  z-index: 2;
+}
+
+.step.active {
+  color: orange;
+}
+
+@media (max-width: 900px) {
+  .step {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .step {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .step {
+    font-size: 9.5px;
+  }
+}

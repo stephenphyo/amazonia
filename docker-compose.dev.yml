@@ -1,0 +1,31 @@
+version: "3"
+services:
+  amazonia-backend:
+    build:
+      args:
+        APP_ENV: development
+    ports:
+      - "9010:9010"
+    volumes:
+      - ./amazonia-backend:/app
+    env_file:
+      - ./.env_backend
+    environment:
+      - PORT=9010
+    command: npm run dev
+
+  amazonia-frontend:
+    ports:
+      - "8080:3000"
+    volumes:
+     - ./amazonia-frontend:/app
+    env_file:
+      - ./.env_frontend
+    command: npm start
+
+  amazonia-mongodb:
+   volumes:
+    - mongodb_data:/data/db
+
+volumes:
+  mongodb_data:

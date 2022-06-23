@@ -1,0 +1,179 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Merriweather&family=Playfair+Display&display=swap");
+@font-face {
+  font-family: "Helvetica Neue";
+  src: local("../public/fonts/HelveticaNeue Medium.ttf");
+}
+
+:root {
+  --color1: #ffcd3c;
+  --color2: #4c8bf5;
+}
+
+.Toastify__toast-container {
+  height: 50px;
+}
+
+.payment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+}
+
+.payment__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  max-width: 350px;
+  min-width: 280px;
+  padding: 30px 20px;
+  margin-top: 5px;
+  border-radius: 15px;
+}
+
+.payment__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  width: 90%;
+  font-family: "Merriweather";
+  font-size: 22px;
+}
+
+.payment__infoBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 5px;
+  gap: 20px;
+}
+
+.payment__option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 35px;
+  transition: 0.25s;
+  font-family: "Helvetica Neue";
+  background-color: blue;
+}
+
+.payment__option:hover {
+  width: 100%;
+  cursor: pointer;
+}
+
+.payment__option:focus {
+  width: 100%;
+  outline: none;
+}
+
+.payment__option.selected {
+  width: 100%;
+  outline: none;
+}
+
+.paypal {
+  background-color: rgba(255, 187, 0);
+}
+
+.paypal img {
+  max-width: 25%;
+}
+
+.stripe {
+  background-color: #c6a2ec;
+}
+
+.stripe img {
+  max-width: 16%;
+}
+
+.visa {
+  background-color: rgb(68, 173, 214);
+}
+
+.visa img {
+  max-width: 20%;
+}
+
+.master {
+  background-color: rgb(250, 166, 180);
+}
+
+.master img {
+  max-width: 16%;
+}
+
+.banking {
+  background-color: darkgray;
+}
+
+.banking svg {
+  transition: 0.25s;
+  font-size: 24px;
+  color: black;
+}
+
+.banking span {
+  margin-left: 5px;
+}
+
+.cod {
+  color: white;
+  background-color: #16a55e;
+}
+
+.cod svg {
+  font-size: 25px;
+}
+
+.payment__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 15px 20px;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.payment__button button {
+  border: none;
+  width: 100px;
+  height: 35px;
+  border-radius: 5px;
+  font-family: "Merriweather";
+  font-size: 15px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.8);
+  background-color: var(--color1);
+  transition: 0.35s;
+}
+
+.payment__button button:hover {
+  width: 120px;
+  cursor: pointer;
+  color: white;
+  background-color: #4c8bf5;
+}
+
+.payment__button button:focus {
+  padding: 0 20px;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  background-color: #4c8bf5;
+}

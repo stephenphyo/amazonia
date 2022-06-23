@@ -1,0 +1,120 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Merriweather&family=Playfair+Display&display=swap");
+@font-face {
+  font-family: "Helvetica Neue";
+  src: local("../public/fonts/HelveticaNeue Medium.ttf");
+}
+
+:root {
+  --color1: #ffcd3c;
+  --color2: #4c8bf5;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100%;
+}
+
+.profile__sidebar {
+  display: flex;
+  flex: 0.25;
+  flex-direction: column;
+  padding: 0 10px;
+  /* background-color: var(--color2); */
+}
+
+.profile__sidebar__pfp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-height: 200px;
+  padding: 20px 0;
+  background-color: blueviolet;
+}
+
+.profile__sidebar__pfp__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+
+.profile__sidebar__pfp__container img {
+  width: 100%;
+  height: 100%;
+  border: 5px white solid;
+}
+
+.profile__sidebar__pfp__cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  font-size: 23px;
+  font-weight: bold;
+  font-family: "Helvetica Neue";
+  color: white;
+  z-index: 2;
+  visibility: hidden;
+  box-shadow: 0 0 20px 2px rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(1.5px);
+}
+
+.profile__sidebar__pfp__container:hover .profile__sidebar__pfp__cover {
+  cursor: pointer;
+  visibility: visible;
+}
+
+.profile__sidebar__pfp__container:hover img {
+  border-radius: 50%;
+}
+
+.profile__sidebar__settings {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: left;
+  padding: 10px;
+  background-color: green;
+}
+
+.profile__sidebar__setting {
+  display: flex;
+  width: 100%;
+  padding: 10px 0 10px 12px;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.profile__sidebar__setting:hover {
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: lightgray;
+}
+
+.profile__body {
+  display: flex;
+  flex: 0.75;
+  flex-direction: column;
+  padding: 20px;
+  background-color: orange;
+}
+
+.profile__body__username {
+  width: 100%;
+  height: 10%;
+  font-size: 45px;
+  font-weight: bold;
+  font-family: "Helvetica Neue";
+  background-color: aqua;
+}

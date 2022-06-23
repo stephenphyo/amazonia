@@ -1,0 +1,257 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Merriweather&family=Playfair+Display&display=swap");
+
+.cart__items {
+  display: flex;
+  flex-direction: column;
+  flex: 0.75;
+  height: max-content;
+}
+
+.empty-cart {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 0px;
+  font-size: 10px;
+  border: 1px solid lightblue;
+  border-radius: 10px;
+  background-color: lightblue;
+}
+
+.empty-cart span {
+  margin-left: 10px;
+}
+
+.empty-cart p {
+  margin-left: 25px;
+  font-family: "Merriweather";
+  font-size: 15px;
+}
+
+.item__row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0px;
+  border: 1px solid lightgray;
+  font-size: 10px;
+}
+
+.item__row:not(:only-child):first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+.item__row:not(:only-child):last-child {
+  border-radius: 0 0 5px 5px;
+  border-top: 0;
+}
+
+.item__row:only-child {
+  border-radius: 5px;
+}
+
+.item__row:not(:first-child):not(:last-child):not(:only-child) {
+  border-top: 0;
+}
+
+.item__image {
+  width: 25%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item__image img {
+  width: auto;
+  min-width: 35%;
+  max-width: 100%;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.item__description {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  margin: 0 10px 0 15px;
+  padding: 10px 0;
+  font-family: "Merriweather";
+  font-size: 14px;
+}
+
+.item__count {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item__count input {
+  width: 20px;
+  text-align: center;
+  border: none;
+  margin: 0 3px;
+  font-size: 14px;
+}
+
+.item__count svg {
+  font-size: 24px;
+}
+
+.item__count svg:hover {
+  cursor: pointer;
+}
+
+.item__count .btn-count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+}
+
+.item__count .btn-count.down:not([disabled]) svg:hover {
+  color: red;
+}
+
+.item__count .btn-count.down:disabled svg:hover {
+  cursor: not-allowed;
+}
+
+.item__count .btn-count.up:not([disabled]) svg:hover {
+  color: green;
+}
+
+.item__count .btn-count.up:disabled svg:hover {
+  cursor: not-allowed;
+}
+
+.item__price {
+  width: 13%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item__priceContainer {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin-top: 20px;
+  gap: 5px;
+}
+
+.item__priceContainer .new {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.item__priceContainer .original {
+  left: -30px;
+  color: red;
+  text-decoration: line-through;
+  font-size: 11px;
+}
+
+.item__delete {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item__delete svg {
+  font-size: 24px;
+}
+
+.item__delete:hover {
+  cursor: pointer;
+  color: red;
+}
+
+@media (max-width: 800px) {
+  .cart__items {
+    flex: 0.95;
+    width: 100%;
+  }
+
+  .item__image img {
+    width: auto;
+    min-width: 50%;
+    max-width: 80%;
+    height: 100px;
+  }
+
+  .item__count svg {
+    font-size: 20px;
+  }
+
+  .item__price {
+    font-size: 15px;
+  }
+
+  .item__delete svg {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .item__image {
+    margin-left: 10px;
+    width: 25%;
+    height: auto;
+    max-height: 90px;
+  }
+
+  .item__image img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    min-height: 70px;
+    max-height: 100px;
+  }
+
+  .item__description {
+    width: 23%;
+    margin: 0 5px 0 8px;
+    font-size: 10px;
+  }
+
+  .item__count {
+    width: 20%;
+  }
+
+  .item__count input {
+    width: 12px;
+    margin: 0 3px;
+    font-size: 11px;
+  }
+
+  .item__count svg {
+    font-size: 16px;
+  }
+
+  .item__price {
+    width: 13%;
+  }
+
+  .item__priceContainer {
+    margin-top: 15px;
+  }
+
+  .item__priceContainer .new {
+    font-size: 11px;
+  }
+
+  .item__priceContainer .original {
+    font-size: 8px;
+  }
+
+  .item__delete svg {
+    font-size: 18px;
+  }
+}

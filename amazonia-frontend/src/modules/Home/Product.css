@@ -1,0 +1,155 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Merriweather&family=Playfair+Display&display=swap");
+
+.product {
+  width: 18%;
+  min-height: 300px;
+  max-height: fit-content;
+  margin: 10px;
+  border: none;
+  overflow: hidden;
+  transition: 0.25s;
+  user-select: none;
+  background-color: white;
+}
+
+.product:hover {
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.product__image {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+  background-color:rgba(0, 0, 0, 0.8);
+}
+
+.product img {
+  display: flex;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  min-height: 200px;
+  max-height: 100%;
+}
+
+.product__name {
+  height: 40px;
+  font-weight: bold;
+}
+
+.product__info {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  margin-top: 10px;
+  margin-right: 0;
+  margin-bottom: 0px;
+  margin-left: 20px;
+  gap: 2px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.product__name {
+  font-size: 18px;
+}
+
+.product__price {
+  font-size: 17px;
+  color: #118c4f;
+}
+
+.product__price #original-price {
+  margin-left: 10px;
+  font-size: 11px;
+  color: red;
+  text-decoration: line-through;
+}
+
+.product__rating {
+  display: flex;
+  align-items: center;
+  margin-left: -3px;
+}
+
+.product__rating svg {
+  font-size: 17px;
+  color: #ffcd3c;
+}
+
+.product__rating #reviews {
+  margin-left: 5px;
+  margin-bottom: 3px;
+  font-size: 10px;
+}
+
+.product__add {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  gap: 15px;
+}
+
+.product__add button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0px;
+  width: 40%;
+  height: 35px;
+  font-size: 13px;
+  font-family: "Merriweather";
+  font-weight: bold;
+  color: rgba(35, 31, 32, 1);
+  border: none;
+  border-radius: 8px;
+  background-color: #ffcd3c;
+}
+
+.product__add #buynow {
+  background-color: cyan;
+}
+
+.product__add #soldOut {
+  width: 80%;
+  cursor: not-allowed;
+  background-color: gray;
+}
+
+.product__add button:hover {
+  cursor: pointer;
+  background-color: lightblue;
+}
+
+@media (max-width: 1080px) {
+  .product {
+    width: 25%;
+  }
+}
+
+@media (max-width: 800px) {
+  .product {
+    width: 40%;
+  }
+}
+
+@media (max-width: 600px) {
+  .product {
+    width: 60%;
+  }
+}
+
+@media (max-width: 800px) {
+  .product__info .product__name {
+    font-size: 16px;
+  }
+
+  .product__info .product__price {
+    font-size: 14px;
+  }
+}
