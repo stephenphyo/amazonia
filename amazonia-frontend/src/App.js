@@ -31,7 +31,9 @@ function App() {
   return (
     <Router>
       <div className="app">
-        <Header />
+        <div className="app__header">
+          <Header />
+        </div>
         <div className="app__body">
           {/* In react-router-dom v6, "Switch" is replaced by routes "Routes". */}
           <Routes>

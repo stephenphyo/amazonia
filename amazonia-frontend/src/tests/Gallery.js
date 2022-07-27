@@ -109,6 +109,7 @@ function Gallery() {
 
     useEffect(() => {
         fetchData();
+        console.log("fetch");
     }, []);
 
     useEffect(() => {
@@ -124,15 +125,82 @@ function Gallery() {
     }, [uploader]);
 
     return (
-        <div className="gallery">
-            <div className="gallery__body">
-                {emptyList
-                    ?
-                    <div className="gallery__message">
-                        <span>No files were found.</span>
-                    </div>
-                    :
-                    fileList.map((img, index) => (
+    //     <>
+    //     <div className="gallery">
+    //         <div className="gallery__body">
+    //             {emptyList
+    //                 ?
+    //                 <div className="gallery__message">
+    //                     <span>No files were found.</span>
+    //                 </div>
+    //                 :
+    //                 fileList.map((img, index) => (
+    //                     <div
+    //                         key={index}
+    //                         className="gallery__imgcontainer"
+    //                         onClick={() => {
+    //                             if (checkFileType(img.file_url) === "image") {
+    //                                 setImageViewer(true);
+    //                             } else {
+    //                                 setVideoViewer(true);
+    //                             }
+    //                             setSrc(img.file_url);
+    //                         }}>
+    //                         {checkFileType(img.file_url) === 'image' &&
+    //                             <img alt={img.file_url} src={img.file_url} />
+    //                         }
+    //                         {checkFileType(img.file_url) === 'video' &&
+    //                             <div className="gallery__overlay">
+    //                                 <video
+    //                                     ref={videoMetadata} src={img.file_url}
+    //                                     preload="metadata" id="metadata" />
+    //                                 <img alt="video" src={VideoIcon} id="icon" />
+    //                                 {/* <span id="duration">
+    //                                     {getVideoDuration(videoMetadata.current.duration)}
+    //                                     {getVideoDuration(document.getElementById('metadata').duration)}
+    //                                 </span> */}
+    //                                 <div className="gallery__overlay__hover">
+    //                                     <PlayCircleOutlineIcon />
+    //                                 </div>
+    //                             </div>
+    //                         }
+    //                     </div>
+    //                 ))}
+    //         </div>
+    //         {imageViewer &&
+    //             <div ref={viewer} className="gallery__viewer">
+    //                 <img alt={src} src={src} id="viewer_img" />
+    //                 <label onClick={() => setImageViewer(false)}>
+    //                     <CloseIcon />
+    //                 </label>
+    //             </div>
+    //         }
+    //         {videoViewer &&
+    //             <div className="gallery__viewer">
+    //                 <video src={src}  controls autoPlay loop />
+    //                 <label onClick={() => setVideoViewer(false)}>
+    //                     <CloseIcon />
+    //                 </label>
+    //             </div>
+    //         }
+    //         <div className="gallery__footer">
+    //             <button
+    //                 className='btn filled' id='add'
+    //                 onClick={() => setUploader(true)}>
+    //                 Add
+    //             </button>
+    //             <button
+    //                 className='btn filled' id='delete'>
+    //                 Delete
+    //             </button>
+    //         </div>
+    //     </div>
+    //     { uploader && <FinalUploaderModal setModal={setUploader} modal={uploader} fetchData={fetchData} /> }
+    // </>
+        <>
+    <div className="gallery">
+    <div className="gallery__body">
+                    {fileList.map((img, index) => (
                         <div
                             key={index}
                             className="gallery__imgcontainer"
@@ -144,56 +212,10 @@ function Gallery() {
                                 }
                                 setSrc(img.file_url);
                             }}>
-                            {checkFileType(img.file_url) === 'image' &&
-                                <img alt={img.file_url} src={img.file_url} />
-                            }
-                            {checkFileType(img.file_url) === 'video' &&
-                                <div className="gallery__overlay">
-                                    <video
-                                        ref={videoMetadata} src={img.file_url}
-                                        preload="metadata" id="metadata" />
-                                    <img alt="video" src={VideoIcon} id="icon" />
-                                    {/* <span id="duration">
-                                        {getVideoDuration(videoMetadata.current.duration)}
-                                        {getVideoDuration(document.getElementById('metadata').duration)}
-                                    </span> */}
-                                    <div className="gallery__overlay__hover">
-                                        <PlayCircleOutlineIcon />
-                                    </div>
-                                </div>
-                            }
-                        </div>
-                    ))}
-            </div>
-            {imageViewer &&
-                <div ref={viewer} className="gallery__viewer">
-                    <img alt={src} src={src} id="viewer_img" />
-                    <label onClick={() => setImageViewer(false)}>
-                        <CloseIcon />
-                    </label>
-                </div>
-            }
-            {videoViewer &&
-                <div className="gallery__viewer">
-                    <video src={src}  controls autoPlay loop />
-                    <label onClick={() => setVideoViewer(false)}>
-                        <CloseIcon />
-                    </label>
-                </div>
-            }
-            <div className="gallery__footer">
-                <button
-                    className='btn filled' id='add'
-                    onClick={() => setUploader(true)}>
-                    Add
-                </button>
-                <button
-                    className='btn filled' id='delete'>
-                    Delete
-                </button>
-            </div>
-            {uploader && <FinalUploaderModal setModal={setUploader} modal={uploader} fetchData={fetchData} />}
-        </div>
+                            <img alt={img.file_url} src={img.file_url} />
+                            </div>))}
+                    </div></div>
+                </>
     );
 }
 

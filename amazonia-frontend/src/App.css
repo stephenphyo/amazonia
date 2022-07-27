@@ -8,16 +8,13 @@
   padding: 0;
 }
 
-html, body, #root {
-  height: 100%;
-}
-
 .app {
-  height: 100%;
+  height: 100vmin;
   display: block;
   flex-direction: column;
-  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
-  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  /* Hide scrollbar for IE and Edge */
+  scrollbar-width: none;
+  /* Hide scrollbar for Firefox */
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -26,8 +23,17 @@ html, body, #root {
   height: 0px;
 }
 
+.app__header {
+  top: 0px;
+  left: 0px;
+  height: 50px;
+  position: sticky;
+  z-index: 1000;
+}
+
 .app__body {
-  height: calc(100% - 50px);
+  height: calc(100vh - 50px);
+  overflow: scroll;
   background-color: var(--main-background-color);
   /* background-image: url("images/bg-home.jpg");
   background-size: cover;
